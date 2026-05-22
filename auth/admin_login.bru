@@ -1,0 +1,26 @@
+meta {
+  name: admin_login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/api/auth/admin
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: {{ADMIN_EMAIL}}
+  password: {{ADMIN_PW}}
+}
+
+vars:pre-request {
+  ADMIN_EMAIL: fa@fa.fa
+  ADMIN_PW: 123456
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

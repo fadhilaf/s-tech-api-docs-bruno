@@ -1,0 +1,26 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/api/auth/login
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: {{USER_EMAIL}}
+  password: {{USER_PW}}
+}
+
+vars:pre-request {
+  USER_TEST_EMAIL: test@test.test
+  USER_TEST_PW: test
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
