@@ -1,0 +1,17 @@
+meta {
+  name: delivered_order
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/api/order/delivered
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "YOUR_ORDER_UUID_HERE"
+  }
+}

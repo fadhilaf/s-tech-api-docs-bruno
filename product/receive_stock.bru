@@ -1,0 +1,20 @@
+meta {
+  name: receive_stock
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/api/product/admin/receive_stock
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "product_id": "YOUR_PRODUCT_UUID_HERE",
+    "supplier_id": "YOUR_SUPPLIER_UUID_HERE",
+    "quantity": 50,
+    "price": 10000
+  }
+}

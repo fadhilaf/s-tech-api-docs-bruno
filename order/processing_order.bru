@@ -1,0 +1,17 @@
+meta {
+  name: processing_order
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/api/order/processing
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "YOUR_ORDER_UUID_HERE"
+  }
+}

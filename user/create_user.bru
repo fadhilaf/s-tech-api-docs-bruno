@@ -1,0 +1,21 @@
+meta {
+  name: create_user
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/api/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "user@example.com",
+    "password": "password123",
+    "name": "John Doe",
+    "address": "123 Main St",
+    "phone": "1234567890"
+  }
+}

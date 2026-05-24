@@ -1,0 +1,20 @@
+meta {
+  name: create_product
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/api/product/admin
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Product Name
+  price: 10000
+  stock: 10
+  is_service: false
+  description: Product Description
+  image: @file(path/to/image.jpg)
+}
