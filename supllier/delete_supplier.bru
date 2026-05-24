@@ -1,0 +1,11 @@
+meta {
+  name: delete_supplier
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{BASE_URL}}/api/product/admin/supplier/YOUR_SUPPLIER_UUID_HERE
+  body: none
+  auth: inherit
+}
