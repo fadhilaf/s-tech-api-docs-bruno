@@ -1,0 +1,15 @@
+meta {
+  name: get_product_chronology
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{BASE_URL}}/api/product/admin/{{id}}/chronology
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: 5df3e230-60b4-45f7-94e7-682db31823a3
+}

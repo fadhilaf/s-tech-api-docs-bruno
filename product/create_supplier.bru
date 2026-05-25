@@ -1,0 +1,17 @@
+meta {
+  name: create_supplier
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE_URL}}/api/product/admin/supplier
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "New Supplier"
+  }
+}

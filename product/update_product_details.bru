@@ -1,0 +1,16 @@
+meta {
+  name: update_product_details
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{BASE_URL}}/api/product/admin/:id
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: New Product Name
+  description: Updated product description
+}

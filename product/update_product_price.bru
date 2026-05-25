@@ -1,0 +1,18 @@
+meta {
+  name: update_product_price
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/api/product/admin/:id/price
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "price": 15000,
+    "effective_date": "2026-06-01T00:00"
+  }
+}
